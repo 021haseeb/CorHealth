@@ -53,9 +53,40 @@
 .back-link{color:#0f4c81;text-decoration:none;font-weight:700;}
 .back-link:hover{text-decoration:underline;}
 
+/* Map block on detail page */
+.detail-map-wrap{margin-top:28px;}
+.detail-map-title{margin:0 0 12px;font-size:1.1rem;color:#0f172a;}
+.detail-map-shell{
+  position:relative;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(15,76,129,.16);
+  box-shadow:0 18px 55px rgba(0,0,0,.10);
+}
+.detail-map-shell::before{
+  content:"";
+  position:absolute;
+  inset:-60px;
+  background:radial-gradient(circle at 40% 20%, rgba(56,189,248,.35), transparent 55%);
+  pointer-events:none;
+  animation:detailMapGlow 3.5s ease-in-out infinite;
+}
+@keyframes detailMapGlow{
+  0%,100%{transform:translateY(0);opacity:.95;}
+  50%{transform:translateY(12px);opacity:1;}
+}
+.detail-map-shell iframe{
+  width:100%;
+  height:320px;
+  border:0;
+  position:relative;
+}
+
 @media(max-width:992px){
   .detail-layout{grid-template-columns:1fr;}
   .detail-media img{height:320px;}
   .detail-header h1{font-size:2.4rem;}
+  .detail-map-shell iframe{height:280px;}
 }
+
 

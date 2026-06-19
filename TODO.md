@@ -1,22 +1,12 @@
-# TODO - COR Healthcare Website Completion
+# TODO - Premium Flex-Style Healthcare Hero Slider
 
-- [ ] Convert navbar to real multi-page navigation (no hash anchors)
-  - [ ] Create: index.html (Home)
-  - [ ] Create: about.html
-  - [ ] Create: testimonials.html
-  - [ ] Create: feedback.html
-  - [ ] Create: contact.html (Contact page)
-  - [ ] Update navbar links in all pages
+- [x] Step 1: Replace `index.html` hero markup with new split-screen slider structure + navigation UI (desktop vertical, mobile bottom).
 
-- [ ] Add new navbar links + pages
-  - [ ] Team page (team photos + bios + animations)
-    - [ ] Create: team.html
-    - [ ] Add Team link in navbar
-  - [ ] Locations page (list all homes)
-    - [ ] Create: locations.html
-- [ ] Manual verification:
-  - [ ] Scroll animations trigger correctly (About/Testimonial/Feedback/Footer)
-  - [ ] Counter animation still works
-  - [ ] Form submits and shows success message without reload
-  - [ ] Responsive checks (desktop/tablet/mobile)
+- [x] Step 2: Add slider styling to `index.css` (themes via CSS var `--theme`, glassmorphism, split layout, premium button/hover, floating stats, background word, animations).
+
+
+- [x] Step 3: Implement slider engine in `index.js` (5 slides, autoplay every 5s, pause on hover, manual navigation, content/image/word enter-exit animations, reduced-motion handling).
+
+- [ ] Step 4: Ensure autoplay pause/resume works during hover and manual clicks.
+- [ ] Step 5: Manual verification: open `index.html` in browser and check transitions, responsiveness, and no layout regressions.
 
