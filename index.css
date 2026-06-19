@@ -329,6 +329,9 @@ html, body{
 
 /* TABLET */
 @media(max-width:991px){
+  .nav-btn{
+    display: none;
+  }
 
   .hero{
     flex-direction:column;
@@ -407,6 +410,9 @@ html, body{
 
 /* MOBILE */
 @media(max-width:576px){
+  .nav-btn{
+    display: none;
+  }
 
   .navbar{
     padding:15px 18px;
