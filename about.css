@@ -10,6 +10,25 @@ background:#f8fafc;
 overflow-x:hidden;
 }
 
+/* =========================
+   ABOUT REVEAL ANIMATION
+========================= */
+.reveal{
+opacity:0;
+transform:translateY(22px);
+transition:0.8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* small stagger for cards/grids */
+.reveal:nth-child(2){transition-delay:80ms;}
+.reveal:nth-child(3){transition-delay:140ms;}
+.reveal:nth-child(4){transition-delay:200ms;}
+
 .navbar{
 position:fixed;
 top:20px;
@@ -184,3 +203,20 @@ color:white;
 height:60px;
 margin-bottom:20px;
 }
+
+@media(max-width:992px){
+.about-hero h1{font-size:3.2rem;}
+.story-grid{grid-template-columns:1fr;}
+.cards{grid-template-columns:1fr;}
+.values-grid{grid-template-columns:1fr 1fr;}
+.why-grid{grid-template-columns:1fr 1fr;}
+}
+
+@media(max-width:576px){
+.nav-btn{padding:12px 20px;}
+.about-hero{padding-top:160px;}
+.about-hero h1{font-size:2.4rem;}
+.values-grid{grid-template-columns:1fr;}
+.why-grid{grid-template-columns:1fr;}
+}
+
