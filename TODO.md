@@ -1,19 +1,19 @@
 # TODO - COR Healthcare Website Completion
 
-- [ ] Add reusable scroll animations for elements with class `.reveal` (CSS + JS)
-- [x] Update `index.js` to animate all `.reveal` elements on scroll while keeping counters working
+- [ ] Convert navbar to real multi-page navigation (no hash anchors)
+  - [ ] Create: index.html (Home)
+  - [ ] Create: about.html
+  - [ ] Create: testimonials.html
+  - [ ] Create: feedback.html
+  - [ ] Create: contact.html (Contact page)
+  - [ ] Update navbar links in all pages
 
-- [x] Update `index.html`:
-
-  - [ ] Add About section (`#about`)
-  - [ ] Add Testimonials section (`#testimonials`)
-  - [ ] Add Feedback / Contact form section (`#feedback`)
-  - [ ] Add Footer section (`#footer`)
-  - [ ] Wire navbar links to anchors
-- [x] Update `index.css` with styles for the new sections (About, Testimonials, Feedback/Form, Footer)
-
-- [x] Add form validation + success toast (JS)
-
+- [ ] Add new navbar links + pages
+  - [ ] Team page (team photos + bios + animations)
+    - [ ] Create: team.html
+    - [ ] Add Team link in navbar
+  - [ ] Locations page (list all homes)
+    - [ ] Create: locations.html
 - [ ] Manual verification:
   - [ ] Scroll animations trigger correctly (About/Testimonial/Feedback/Footer)
   - [ ] Counter animation still works

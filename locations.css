@@ -1,0 +1,154 @@
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 8%;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:#38bdf8;
+filter:blur(180px);
+opacity:.15;
+}
+
+.hero-content{
+max-width:900px;
+z-index:2;
+}
+
+.hero-content h1{
+font-size:5rem;
+line-height:1.1;
+margin:25px 0;
+}
+
+.location-stats{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.stat{
+background:white;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.featured-home{
+padding:120px 8%;
+}
+
+.featured-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.featured-image img{
+width:100%;
+border-radius:30px;
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+}
+
+.featured-content h2{
+font-size:3rem;
+margin:20px 0;
+}
+
+.featured-content ul{
+margin:30px 0;
+padding-left:20px;
+}
+
+.featured-content li{
+margin-bottom:12px;
+}
+
+.homes{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.homes-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.home-card{
+background:white;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.home-card:hover{
+transform:translateY(-15px);
+}
+
+.home-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+transition:.5s;
+}
+
+.home-card:hover img{
+transform:scale(1.1);
+}
+
+.card-content{
+padding:25px;
+}
+
+.services{
+padding:120px 8%;
+background:#f1f5f9;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+}
+
+.cta{
+padding:120px 8%;
+}
+
+.cta-box{
+background:#0f4c81;
+color:white;
+padding:90px;
+border-radius:35px;
+text-align:center;
+}
