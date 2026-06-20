@@ -104,7 +104,37 @@
 
 
 
+<section class="location-finder">
 
+  <div class="finder-header reveal">
+    <h2>Find a Care Home Near You</h2>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search locations...">
+    </div>
+
+    <div class="suggestions" id="suggestions"></div>
+  </div>
+
+  <div class="finder-body">
+
+    <!-- LEFT: DETAILS -->
+    <div class="location-details" id="locationDetails">
+      <h3>Select a location</h3>
+      <p>Click on any location to view full details.</p>
+    </div>
+
+    <!-- RIGHT: MAP -->
+    <div class="map-box">
+      <iframe id="mapFrame"
+        src="https://www.google.com/maps?q=Lahore&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
 
 
 
