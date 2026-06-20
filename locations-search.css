@@ -1,0 +1,42 @@
+/* Extra styles for Locations page search UI */
+
+/* Suggestions dropdown */
+.autocomplete{
+  position:absolute;
+  left:18px;
+  right:18px;
+  top:62px;
+  background:white;
+  border-radius:16px;
+  box-shadow:0 25px 70px rgba(0,0,0,.15);
+  border:1px solid rgba(15,76,129,.12);
+  overflow:hidden;
+  z-index:50;
+}
+
+.auto-item{
+  padding:12px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  cursor:pointer;
+  outline:none;
+}
+
+.auto-item:hover,
+.auto-item.active{
+  background:linear-gradient(90deg, rgba(15,76,129,.10), rgba(56,189,248,.10));
+}
+
+.auto-title{font-weight:800;color:#0f172a;}
+.auto-sub{font-size:.92rem;color:#64748b;}
+
+.empty-state{
+  padding:40px 18px;
+  text-align:center;
+  grid-column:1/-1;
+}
+
+.empty-title{font-weight:1000;font-size:1.3rem;color:#0f172a;}
+.empty-sub{margin-top:8px;color:#64748b;}
+

@@ -1,12 +1,7 @@
-# TODO - Premium Flex-Style Healthcare Hero Slider
+# TODO - About page responsive fixes
+- [x] Update `about.css` navbar to match `index.css` behavior (mobile dropdown styling, offsets, link colors)
+- [x] Fix mobile dropdown positioning to align with fixed navbar height
+- [ ] Normalize about page section container usage to exactly mirror homepage (optional if you want 1:1 pixel parity)
+- [x] Keep `about.js` as-is (navbar scroll + mobile toggle + reveal animations already consistent)
 
-- [x] Step 1: Replace `index.html` hero markup with new split-screen slider structure + navigation UI (desktop vertical, mobile bottom).
-
-- [x] Step 2: Add slider styling to `index.css` (themes via CSS var `--theme`, glassmorphism, split layout, premium button/hover, floating stats, background word, animations).
-
-
-- [x] Step 3: Implement slider engine in `index.js` (5 slides, autoplay every 5s, pause on hover, manual navigation, content/image/word enter-exit animations, reduced-motion handling).
-
-- [ ] Step 4: Ensure autoplay pause/resume works during hover and manual clicks.
-- [ ] Step 5: Manual verification: open `index.html` in browser and check transitions, responsiveness, and no layout regressions.
-
+Next: open `about.html` and verify at 992px and 576px widths.

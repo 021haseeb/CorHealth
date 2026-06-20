@@ -31,7 +31,7 @@
     <a href="contact.html"><button class="nav-btn">Contact Us</button></a>
   </nav>
 
-  <section class="detail-hero">
+  <section class="detail-hero" style="padding-top:120px;">
     <div class="detail-inner">
       <div class="detail-header reveal">
         <span class="tag" id="detailTag">Location</span>
@@ -79,8 +79,10 @@
     </div>
   </section>
 
+  <script src="location-data.js"></script>
   <script src="locations.js"></script>
   <script>
+
     // Small inline bootstrap in case locations.js focuses on navbar/animations only
     window.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);

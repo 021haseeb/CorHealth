@@ -7,6 +7,7 @@
 <title>Locations | COR Healthcare</title>
 
 <link rel="stylesheet" href="locations.css">
+<link rel="stylesheet" href="locations-search.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -14,269 +15,111 @@
 
 <nav class="navbar">
 
-  <div class="logo">
-    <img src="logohealth.png" alt="">
-  </div>
+    <div class="logo">
+        <img src="logohealth.png" alt="COR Healthcare">
+    </div>
 
-  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-    <span class="menu-icon" aria-hidden="true"></span>
-  </button>
+    <ul class="nav-links">
 
-  <ul id="nav-links" class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html">Team</a></li>
-    <li><a href="locations.html">Locations</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
 
-  <a href="contact.html">
-    <button class="nav-btn">Contact Us</button>
-  </a>
+        <li>
+            <a href="about.html">About</a>
+        </li>
 
+        <li>
+            <a href="team.html">Team</a>
+        </li>
+
+        <li>
+            <a href="locations.html" class="active">Locations</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+    </ul>
+
+    <a href="contact.html" class="nav-btn">
+        Schedule Tour
+    </a>
+
+    <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 
-<!-- HERO -->
 
-<section class="hero">
 
-<div class="hero-content reveal">
 
-<span class="tag">Our Locations</span>
+<!-- HERO SECTION -->
 
-<h1>
-Safe Homes.
-Exceptional Care.
-Comfortable Living.
-</h1>
+<section class="locations-hero">
 
-<p>
-Discover our residential healthcare facilities designed
-to provide security, dignity and personalized care.
-</p>
+    <div class="hero-overlay"></div>
 
-</div>
+    <div class="hero-content reveal">
 
-</section>
+        <span class="hero-badge">
+            Our Locations
+        </span>
 
-<!-- STATS -->
+        <h1>
+            Safe Homes.<br>
+            Exceptional Care.<br>
+            Comfortable Living.
+        </h1>
 
-<section class="location-stats">
+        <p>
+            Discover our modern residential healthcare homes designed
+            to provide comfort, dignity and personalized support
+            for every resident.
+        </p>
 
-<div class="stat reveal">
-<h2>15+</h2>
-<p>Homes Operated</p>
-</div>
+        <div class="hero-buttons">
 
-<div class="stat reveal">
-<h2>5000+</h2>
-<p>Residents Served</p>
-</div>
+            <a href="#homes" class="primary-btn">
+                Explore Homes
+            </a>
 
-<div class="stat reveal">
-<h2>24/7</h2>
-<p>Support Available</p>
-</div>
+            <a href="contact.html" class="secondary-btn">
+                Schedule Tour
+            </a>
 
-<div class="stat reveal">
-<h2>20+</h2>
-<p>Years Experience</p>
-</div>
+        </div>
 
-</section>
-
-<!-- FEATURED -->
-
-<section class="featured-home">
-
-<div class="featured-grid">
-
-<div class="featured-image reveal">
-
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200">
-
-</div>
-
-<div class="featured-content reveal">
-
-<span>Featured Facility</span>
-
-<h2>Baltimore Residential Home</h2>
-
-<p>
-Our flagship residence offers professional support,
-comfortable accommodations, and a welcoming
-community environment.
-</p>
-
-<ul>
-
-<li>24/7 Care Staff</li>
-<li>Private & Shared Rooms</li>
-<li>Medication Management</li>
-<li>Transportation Assistance</li>
-<li>Meal Planning</li>
-
-</ul>
-
-<a href="https://maps.google.com/?q=2833 Smith Ave Baltimore MD" target="_blank">
-<button class="nav-btn">
-View On Map
-</button>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- LOCATIONS FINDER + MAP -->
-
-<section class="locations-finder">
-  <div class="finder-inner">
-    <div class="section-title reveal">
-      <h2>Find a Home Near You</h2>
-      <p>Type a city, home name, or keyword — we’ll take you to the details instantly.</p>
     </div>
 
-    <div class="finder-bar reveal">
-      <div class="finder-field">
-        <label class="sr-only" for="search">Search homes</label>
-        <span class="finder-icon" aria-hidden="true">⌕</span>
-        <input id="search" type="text" placeholder="Search: Baltimore, Northwood, 24/7, medication..." autocomplete="off" />
-        <div id="autocomplete" class="autocomplete" role="listbox" aria-label="Search suggestions" hidden></div>
-      </div>
-
-      <div class="finder-select">
-        <label class="sr-only" for="filter">Filter</label>
-        <select id="filter" aria-label="Filter by category">
-          <option value="all">All homes</option>
-          <option value="care">Residential care</option>
-        </select>
-      </div>
-
-      <div class="finder-meta" aria-live="polite">
-        <span id="matchCount" class="match-count">&nbsp;</span>
-      </div>
+    <div class="scroll-indicator">
+        <span></span>
     </div>
 
-    <div class="finder-layout">
-      <div class="finder-list">
-        <div class="grid-head reveal">
-          <div class="grid-title">
-            <h3>Locations</h3>
-            <span class="grid-sub">Select a home to open details.</span>
-          </div>
-          <div class="grid-pill reveal">
-            <span class="dot" aria-hidden="true"></span>
-            Live matching
-          </div>
-        </div>
-
-        <div id="grid" class="homes-grid" aria-label="Locations list"></div>
-      </div>
-
-      <div class="finder-map">
-        <div class="map-head reveal">
-          <h3>Map Preview</h3>
-          <span class="map-sub">Search updates the highlighted home.</span>
-        </div>
-        <div class="map-shell reveal">
-          <div id="mapGlow" class="map-glow" aria-hidden="true"></div>
-          <div class="map-frame">
-            <iframe
-              id="mapFrame"
-              title="Google Map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=2833%20Smith%20Ave%2C%20Baltimore%2C%20MD&output=embed">
-            </iframe>
-          </div>
-        </div>
-
-        <div class="map-address reveal">
-          <div class="map-address-label">Selected</div>
-          <div id="selectedAddress" class="map-address-value">2833 Smith Ave, Baltimore, MD</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOMES -->
-
-<section class="homes" style="padding-top:0">
-  <div class="section-title reveal" style="margin-top:0">
-    <h2 style="margin-bottom:10px">Our Residential Homes</h2>
-    <p>Explore, compare and choose a supportive home environment.</p>
-  </div>
-  <div class="homes-grid" style="display:none" aria-hidden="true"></div>
 </section>
 
 
-<!-- SERVICES -->
 
-<section class="services">
 
-<div class="section-title reveal">
 
-<h2>Services Available Across Locations</h2>
 
-</div>
 
-<div class="services-grid">
 
-<div class="service-card reveal">
-<h3>24/7 Supervision</h3>
-</div>
 
-<div class="service-card reveal">
-<h3>Medication Management</h3>
-</div>
 
-<div class="service-card reveal">
-<h3>Meal Preparation</h3>
-</div>
 
-<div class="service-card reveal">
-<h3>Transportation Support</h3>
-</div>
 
-<div class="service-card reveal">
-<h3>Health Monitoring</h3>
-</div>
 
-<div class="service-card reveal">
-<h3>Family Communication</h3>
-</div>
 
-</div>
 
-</section>
 
-<!-- CTA -->
 
-<section class="cta reveal">
 
-<div class="cta-box">
 
-<h2>
-Find The Right Home For Your Loved One
-</h2>
-
-<p>
-Contact us to schedule a visit or discuss care options.
-</p>
-
-<button class="nav-btn">
-Schedule A Tour
-</button>
-
-</div>
-
-</section>
-
+<script src="location-data.js"></script>
 <script src="locations.js"></script>
 
 </body>
