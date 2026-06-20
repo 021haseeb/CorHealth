@@ -329,6 +329,22 @@ setInterval(next,4000);
   }
 
 
+
+
+  document.querySelectorAll(".faq-item").forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+    
+    // close others
+    document.querySelectorAll(".faq-item").forEach(el => {
+      if(el !== item) el.classList.remove("active");
+    });
+
+    // toggle current
+    item.classList.toggle("active");
+  });
+});
+
+
   const counters = document.querySelectorAll(".counter");
   const statsSection = document.querySelector(".stats-section");
 
