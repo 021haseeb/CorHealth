@@ -900,7 +900,7 @@ color:#f4c95d;
 }
 
 .stats-heading h2{
-    color:#fff;
+    color:#f4c95d;
     font-size:clamp(1.8rem,3vw,2.8rem);
     margin-top:10px;
     line-height:1.2;
@@ -1297,7 +1297,7 @@ color:#f4c95d;
 .testimonials{
   padding:100px 8%;
   background: transparent;
-  color:#fff;
+  color:#f4c95d;
   overflow:hidden;
 }
 
