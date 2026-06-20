@@ -238,6 +238,44 @@ document.addEventListener("DOMContentLoaded", () => {
       }, exitDelay + enterDelay);
     };
 
+    const cards = document.querySelectorAll(".card");
+const progress = document.querySelector(".progress");
+
+let index = 0;
+
+function update(){
+  cards.forEach((c,i)=>{
+    c.className = "card";
+
+    if(i === index){
+      c.classList.add("active");
+    }
+    else if(i === (index+1)%cards.length){
+      c.classList.add("right");
+    }
+    else if(i === (index-1+cards.length)%cards.length){
+      c.classList.add("left");
+    }
+    else{
+      c.classList.add("back");
+    }
+  });
+
+  progress.style.width = "0%";
+  setTimeout(()=>{
+    progress.style.transition = "width 4s linear";
+    progress.style.width = "100%";
+  },50);
+}
+
+function next(){
+  index = (index + 1) % cards.length;
+  update();
+}
+
+update();
+setInterval(next,4000);
+
     const start = () => {
       renderSlide(activeIndex);
       setActiveNav(activeIndex);
