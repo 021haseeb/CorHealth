@@ -106,6 +106,50 @@ margin-bottom:12px;
    Locations Finder UI
 ========================= */
 
+/* MOBILE MENU BUTTON */
+.menu-btn{
+  display:none;
+  width:46px;
+  height:40px;
+  border-radius:12px;
+  border:1px solid rgba(244,201,93,0.35);
+  background:rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor:pointer;
+  align-items:center;
+  justify-content:center;
+}
+
+.menu-icon{
+  width:22px;
+  height:14px;
+  position:relative;
+  display:block;
+}
+
+.menu-icon::before,
+.menu-icon::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background:#f4c95d;
+  border-radius:2px;
+}
+
+.menu-icon::before{ top:0; }
+.menu-icon::after{ bottom:0; }
+
+.menu-icon{
+  background:linear-gradient(#f4c95d,#f4c95d);
+  background-repeat:no-repeat;
+  background-size:100% 2px;
+  background-position:center;
+}
+
+
 .sr-only{
   position:absolute;
   width:1px;
