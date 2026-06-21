@@ -32,6 +32,7 @@ body{
 .navbar.active .menu-icon::before{ top:0; transform:rotate(45deg); }
 .navbar.active .menu-icon::after{ top:0; transform:rotate(-45deg); }
 
+
 /* HERO */
 .locations-hero{ min-height:60vh; display:flex; justify-content:center; align-items:center; text-align:center; padding:160px 8% 80px; }
 .tag{ padding:10px 20px; border-radius:30px; background:rgba(250,204,21,0.1); color:#facc15; border:1px solid rgba(250,204,21,0.3); font-weight:600; display:inline-block; }
@@ -67,6 +68,14 @@ body{
 /* CTA */
 .cta-section{ padding:100px 8%; }
 .cta-box{ background:linear-gradient(135deg,#0b1220,#111827); border:1px solid rgba(250,204,21,0.2); padding:80px; border-radius:30px; text-align:center; }
+.cta-box p{
+  margin-bottom:35px; /* pehle 20px tha */
+}
+
+.cta-box .nav-btn{
+  margin-top:35px; /* pehle margin nahi tha */
+}
+
 
 /* MODAL POPUP */
 .modal{ display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); backdrop-filter:blur(10px); z-index:2000; align-items:center; justify-content:center; padding:20px; }
@@ -96,7 +105,18 @@ body{
   .navbar{ padding:14px 20px; justify-content:flex-start; }
   .logo{ order:1; margin-right:auto; }
   .menu-btn{ display:inline-flex; order:3; margin-left:15px; }
-  .nav-btn{ display:none; }
+  
+  /* SIRF NAVBAR KA BUTTON HIDE KARO */
+  .navbar > a > .nav-btn{ display:none; }
+  
+  /* CTA WALA BUTTON SHOW RAKHO */
+  .cta-box .nav-btn{
+    display:block;
+    width:100%;
+    max-width:400px;
+    margin:20px auto 0;
+  }
+  
   .mobile-only-btn{ display:block; margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,0.1); }
   .mobile-btn{ display:block; width:100%; background:linear-gradient(135deg,#facc15,#eab308); color:#0b1220; padding:14px; border-radius:12px; text-align:center; font-weight:700; text-decoration:none; }
   

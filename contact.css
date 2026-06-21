@@ -83,38 +83,53 @@ body{
 }
 
 /* HAMBURGER 3 LINES */
+/* MOBILE MENU BUTTON - RIGHT CORNER */
 .menu-btn{
   display:none;
   width:46px;
   height:40px;
   border-radius:12px;
-  border:1px solid rgba(250,204,21,0.35);
+  border:1px solid rgba(244,201,93,0.35);
   background:rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   cursor:pointer;
   align-items:center;
   justify-content:center;
   position:relative;
+  flex-shrink:0;
 }
 
-.menu-icon,
+/* 3 LINES HAMBURGER - EXACT */
+.menu-icon{
+  width:22px;
+  height:16px;
+  position:relative;
+  display:block;
+}
+
 .menu-icon::before,
-.menu-icon::after{
+.menu-icon::after,
+.menu-icon{
   content:"";
   position:absolute;
-  width:22px;
+  left:0;
+  right:0;
   height:2px;
-  background:#facc15;
+  background:#f4c95d;
   border-radius:2px;
   transition:0.3s ease;
 }
 
-.menu-icon::before{ top:-7px; }
-.menu-icon::after{ top:7px; }
+/* 3 lines ki spacing */
+.menu-icon{ top:7px; } /* center line */
+.menu-icon::before{ top:0; } /* upar wali */
+.menu-icon::after{ bottom:0; } /* neeche wali */
 
+/* CLICK PE X BAN JAYE */
 .navbar.active .menu-icon{ background:transparent; }
-.navbar.active .menu-icon::before{ top:0; transform:rotate(45deg); }
-.navbar.active .menu-icon::after{ top:0; transform:rotate(-45deg); }
+.navbar.active .menu-icon::before{ top:7px; transform:rotate(45deg); }
+.navbar.active .menu-icon::after{ bottom:7px; transform:rotate(-45deg); }
 
 /* ================= HERO ================= */
 .contact-hero{
@@ -410,20 +425,53 @@ textarea{
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:991px){
-  .menu-btn{display:inline-flex;}
-  .nav-btn{display:none;}
+  /* NAVBAR MOBILE LAYOUT - HAMBURGER RIGHT */
+  .navbar{
+    padding:14px 20px;
+    justify-content:flex-start;
+  }
   
+  .logo{ 
+    order:1; 
+    margin-right:auto; /* logo ko left push karega */
+  }
+  
+  .menu-btn{ 
+    display:inline-flex; 
+    order:2; 
+    margin-left:15px;
+    flex-shrink:0;
+  }
+  
+  /* SIRF NAVBAR WALA BUTTON HIDE */
+  .navbar > a > .nav-btn{ display:none; }
+  
+  /* CTA WALA BUTTON SHOW ON MOBILE */
+  .cta-box .nav-btn{
+    display:block;
+    width:100%;
+    max-width:400px;
+    margin:35px auto 0;
+    padding:16px 28px;
+    font-size:1.05rem;
+  }
+  
+  .cta-box p{
+    margin-bottom:30px;
+  }
+  
+  /* MOBILE MENU DROPDOWN RIGHT SIDE */
   .nav-links{
     position:absolute;
-    top:85px;
-    left:50%;
-    transform:translateX(-50%);
-    width:min(92vw,500px);
+    top:80px;
+    right:20px;
+    left:auto;
+    transform:none;
+    width:min(85vw, 320px);
     background:#0b1220;
     border:1px solid rgba(250,204,21,0.2);
     border-radius:18px;
     padding:12px;
-    display:flex;
     flex-direction:column;
     gap:12px;
     max-height:0;
@@ -437,46 +485,22 @@ textarea{
     opacity:1;
   }
   
-  .nav-links a{
-    width:100%;
-    padding:10px 15px;
-  }
-
-  .contact-info{
-    grid-template-columns:1fr;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .row{
-    grid-template-columns:1fr;
-  }
-
-  .hero-content h1{
-    font-size:3rem;
-  }
+  .contact-info{ grid-template-columns:1fr; }
+  .contact-grid{ grid-template-columns:1fr; }
+  .row{ grid-template-columns:1fr; }
+  .hero-content h1{ font-size:3rem; }
 }
 
 @media(max-width:576px){
-  .hero-content h1{
-    font-size:2.4rem;
+  .hero-content h1{ font-size:2.4rem; }
+  .logo img{ height:38px; }
+  .cta-box{ padding:50px 30px; }
+  .cta-box .nav-btn{ 
+    margin-top:30px;
+    padding:15px 24px;
   }
-
-  .logo img{
-    height:38px;
-  }
-
-  .cta-box{
-    padding:50px 30px;
-  }
-  
-  .contact-form{
-    padding:30px 20px;
-  }
+  .contact-form{ padding:30px 20px; }
 }
-
 .why-contact, .faq-mini{
   padding:100px 8%;
   text-align:center;
