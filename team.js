@@ -100,5 +100,7 @@ document.querySelectorAll('.team-card').forEach(card => {
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
   });
 });
+const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 });
