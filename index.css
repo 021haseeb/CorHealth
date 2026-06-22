@@ -1445,8 +1445,8 @@ html, body{
 
 
 .about-cta .secondary-btn{
-  border:2px solid #ffffff;  /* Dark bg pe white border */
-  color:#ffffff;             /* White text */
+  border:2px solid #0f4c81;  /* Dark bg pe white border */
+  color:#0f4c81;             /* White text */
   background:transparent;
 }
 .about-cta .secondary-btn:hover{
